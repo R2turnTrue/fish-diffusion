@@ -13,6 +13,12 @@ from loguru import logger
 from mmengine import Config
 from tqdm import tqdm
 
+import sys
+directory = Path(__file__).resolve().parent
+sys.path.append(str(directory.parent))
+sys.path.append(str(directory.parent.parent))
+__package__ = directory.name
+
 from fish_diffusion.feature_extractors import FEATURE_EXTRACTORS, PITCH_EXTRACTORS
 from fish_diffusion.utils.tensor import repeat_expand
 from fish_diffusion.vocoders import VOCODERS
