@@ -5,7 +5,7 @@ from loguru import logger
 from torch import Tensor, nn
 from torch.hub import load_state_dict_from_url
 from torch.nn import functional as F
-from whisper import _MODELS, log_mel_spectrogram, pad_or_trim
+from whisper import log_mel_spectrogram, pad_or_trim
 from whisper.model import AudioEncoder, LayerNorm, ResidualAttentionBlock, sinusoids
 
 from .base import BaseFeatureExtractor
