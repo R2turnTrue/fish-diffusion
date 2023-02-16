@@ -16,8 +16,8 @@ trainer = dict(
     precision=16,
     callbacks=[
         ModelCheckpoint(
-            filename="{epoch}-{step}-{valid_loss:.2f}",
-            every_n_train_steps=10000,
+            filename="/content/drive/MyDrive/FishSVCTest/{epoch}-{step}-{valid_loss:.2f}",
+            every_n_train_steps=1000,
             save_top_k=-1,
         ),
         LearningRateMonitor(logging_interval="step"),
